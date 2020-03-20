@@ -101,7 +101,7 @@ namespace CosmosDBTest
             var docId = Guid.NewGuid().ToString().PadRight(50, 'y');
 
             // Test writing the same documentId to multiple partitions
-            // See when we trigger an etag conflict for a document that does not exist.
+            // See when we trigger a conflict for a document that does not exist.
             for (int pkLength = 75; pkLength < 100; pkLength++)
             {
                 for (int pkInd = 0; pkInd < 10; pkInd++)
